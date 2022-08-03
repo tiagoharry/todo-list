@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="titulo">
+        <h1>To Do List</h1>
+    </div>
+    <main>
+        <div class="principal">
+            <form action="" class="formulario" id="form">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite um nome..." required>
+                <input type="submit" value="adicionar" class="adicionar" id="adicionar">
+                <p id="mensagem__erro"></p>
+            </form>
+        </div>
+
+        <section class="container">
+            <ul class="lista" id="lista"></ul>
+            <!--<li class="item"><strong>5</strong>camisas</li>!-->
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="botaoDeleta.js"></script>
+</body>
+
+</html>
