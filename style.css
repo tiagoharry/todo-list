@@ -3,20 +3,57 @@
     margin: 0;
     padding: 0;
 }
+
+:root{
+    --label-icon:url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/lua.png");
+    --fundo-cor:linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);    
+}
+
+.dark-mode{
+    --label-icon:url("https://cdn3.iconfinder.com/data/icons/meteocons/512/sun-symbol-512.png");
+    --fundo-cor:black;
+    transition: 2s;
+}
+
+.muda-tema{
+    background: var(--label-icon);
+    background-size: 25px;
+    padding: 22px;
+    position: relative;
+    left: 40px;
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    border-bottom: 7px solid black;
+    cursor: pointer;
+}
+
 body{
-    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background: var(--fundo-cor);
     background-repeat: no-repeat;
     background-size:cover;
     height: 100vh;
 }
 
+.muda-tema:hover{
+    background-color: rgb(216, 211, 211);
+}
+
+#btn{
+    display: none;
+}
+
 .titulo{
     display: flex;
-    justify-content: center;
+    justify-content:center;
+
+    align-items:center;
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -111,4 +148,25 @@ input{
 .fadeOut{
     opacity: 0;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 440px) {
+    body{
+        padding-right: 45px;
+        padding-left: 30px;
+    }
+
+    .titulo{
+        font-size: 20px;
+    }
+
+    .nome{
+        display: flex;
+        align-items: center;
+        margin-left: 12px;   
+    }
+
+    .muda-tema{
+        left: 20px;
+    }
 }
